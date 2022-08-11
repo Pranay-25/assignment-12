@@ -1,0 +1,23 @@
+#include<stdio.h>
+void main()
+{
+	int n,r,even=0,odd=0,ecount=1,ocount=1;
+	printf("Enter number");  //12345
+	scanf("%d",&n);
+	while(n!=0)  //1
+	{
+		r=n%10; //1
+		if(r%2==0) //1
+		{
+			even =(even)+(r*ecount);//4+(2*10)=24
+			ecount=ecount*10;//100
+					}
+		else   
+		{
+		   odd =(odd)+(r*ocount);//  35+(1*100)=135
+			ocount=ocount*10;//10*10=100
+		}
+		n=n/10; 
+	}
+	printf("%d\t%d",even,odd);
+}
